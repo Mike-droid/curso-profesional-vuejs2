@@ -397,3 +397,15 @@ export default {
 </style>
 
 ```
+
+## REST y HTTP
+
+### Servicios
+
+### Fetch API & Trae
+
+[Fetch API](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+
+[Trae](https://github.com/Huemul/trae/tree/v1) la instalamos con `npm i -S trae`
+
+### Consumir API's REST
