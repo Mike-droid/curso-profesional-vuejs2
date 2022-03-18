@@ -409,3 +409,103 @@ export default {
 [Trae](https://github.com/Huemul/trae/tree/v1) la instalamos con `npm i -S trae`
 
 ### Consumir API's REST
+
+Creamos la carpeta 'services' y adentro:
+
+- config.js:
+
+```js
+const configService = {
+  apiUrl: 'https://pokeapi.co/api/v2/pokemon/'
+}
+
+export default configService
+
+```
+
+- pokemon.js:
+
+```js
+import config from '@/services/config'
+
+const pokemon = {
+  getById: async (id) => {
+    try {
+      const response = await fetch(`${config.apiUrl}${id}`)
+      return await response.json()
+    } catch (error) {
+      console.log(`Ocurrió un error: ${error}`)
+    }
+  }
+}
+
+export default pokemon
+
+```
+
+App.vue:
+
+```html
+<template>
+  <div id="app">
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Pokemon name or ID"
+    >
+    <button @click="search">
+      Buscar
+    </button>
+    <p
+      v-if="this.pokemons.id !== undefined"
+    >
+      Pokemon {{ pokemonName }}
+    </p>
+    <div
+      v-if="this.pokemons.id !== undefined"
+    >
+      <img
+        :src="pokemonImage"
+        :alt="pokemonName"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import pokemon from './services/pokemon';
+
+export default {
+  data() {
+    return {
+      searchQuery: '',
+      pokemons: [],
+    }
+  },
+
+  methods: {
+    async search() {
+      try {
+        this.searchQuery ? this.pokemons = await pokemon.getById(this.searchQuery) : alert('Please enter a valid pokemon name or ID');
+      } catch (error) {
+        alert(error);
+      }
+    }
+  },
+
+  computed: {
+    pokemonName() {
+      return this.pokemons.name;
+    },
+
+    pokemonImage() {
+      return this.pokemons.sprites.front_default;
+    }
+  }
+};
+</script>
+
+<style lang="scss">
+</style>
+
+```
