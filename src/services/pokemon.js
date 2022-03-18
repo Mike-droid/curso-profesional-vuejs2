@@ -6,7 +6,7 @@ const pokemon = {
       const response = await fetch(`${config.apiUrl}${id}`)
       return await response.json()
     } catch (error) {
-      console.log(`Ocurrió un error: ${error}`)	
+      console.log(`Ocurrió un error: ${error}`)
     }
   }
 }

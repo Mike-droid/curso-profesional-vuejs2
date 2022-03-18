@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <input type="text" id="searchInput">
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Pokemon name or ID"
+    >
     <button @click="search">
       Buscar
     </button>
     <p
-      v-if="this.pokemons.lenght > 0"
+      v-if="this.pokemons.id !== undefined"
     >
-      Pokemon {{ this.pokemons.name }}
+      Pokemon {{ pokemonName }}
     </p>
     <div
-      v-if="this.pokemons.lenght > 0"
+      v-if="this.pokemons.id !== undefined"
     >
       <img
-        :src="this.pokemons.sprites.front_default"
-        :alt="this.pokemons.name"
+        :src="pokemonImage"
+        :alt="pokemonName"
       />
     </div>
   </div>
@@ -23,23 +27,31 @@
 <script>
 import pokemon from './services/pokemon';
 
-const inputPokemon = document.getElementById('searchInput');
-
 export default {
   data() {
     return {
+      searchQuery: '',
       pokemons: [],
     }
   },
 
   methods: {
     async search() {
-      if (inputPokemon.value !== '' && inputPokemon.value !== null) {
-        this.pokemons = await pokemon.getById(inputPokemon.value);
-        console.log(this.pokemons);
-      } else {
-        console.log('no value')
+      try {
+        this.searchQuery ? this.pokemons = await pokemon.getById(this.searchQuery) : alert('Please enter a valid pokemon name or ID');
+      } catch (error) {
+        alert(error);
       }
+    }
+  },
+
+  computed: {
+    pokemonName() {
+      return this.pokemons.name;
+    },
+
+    pokemonImage() {
+      return this.pokemons.sprites.front_default;
     }
   }
 };
