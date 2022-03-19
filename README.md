@@ -509,3 +509,11 @@ export default {
 </style>
 
 ```
+
+## Sistema de componentes
+
+### Component
+
+Podemos tener un sistema más organizado, escalable, fácil de leer, y los componentes serán reutilizables.
+
+### Creación de componentes

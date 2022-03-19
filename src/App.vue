@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+    <HeaderV/>
     <input
+      class="input is-primary"
       type="text"
       v-model="searchQuery"
       placeholder="Pokemon name or ID"
     >
-    <button @click="search">
+    <button @click="search" class="button is-primary">
       Buscar
     </button>
     <p
@@ -21,13 +23,21 @@
         :alt="pokemonName"
       />
     </div>
+    <FooterV />
   </div>
 </template>
 
 <script>
 import pokemon from './services/pokemon';
+import HeaderV from '@/components/layout/HeaderV'
+import FooterV from '@/components/layout/FooterV';
 
 export default {
+  components: {
+    FooterV,
+    HeaderV
+  },
+
   data() {
     return {
       searchQuery: '',
