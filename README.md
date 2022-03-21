@@ -517,3 +517,17 @@ export default {
 Podemos tener un sistema más organizado, escalable, fácil de leer, y los componentes serán reutilizables.
 
 ### Creación de componentes
+
+### Reactividad
+
+### Ciclo de vida
+
+Cada componente tiene su ciclo de vida.
+
+[Lifecycle hooks](https://v3.vuejs.org/api/options-lifecycle-hooks.html)
+
+### Comunicación entre componentes padres e hijos
+
+Padre -> **propiedades** -> Hijo
+
+Hijo -> **eventos** -> Padre
