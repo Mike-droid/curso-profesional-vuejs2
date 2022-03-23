@@ -4,7 +4,7 @@
     <div class="card-image">
       <figure class="image is-128x128">
         <img
-          @click="onClick"
+          @click="goToPokemon(pokemon.id)"
           class="is-rounded"
           :src="pokemon.sprites.front_default"
           :alt="pokemon.name"
@@ -26,6 +26,10 @@ export default {
   methods: {
     onClick() {
       this.$emit('on-click', this.pokemon);
+    },
+
+    goToPokemon(id) {
+      this.$router.push(`/pokemon/${id}`);
     }
   }
 }

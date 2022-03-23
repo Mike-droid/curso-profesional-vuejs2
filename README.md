@@ -547,3 +547,5 @@ Un plugin añade funcionalidades.
 ### Introducción a Vue Router
 
 ### Instalar vue-router y configurar router view
+
+### Crear y navegar rutas con router-link

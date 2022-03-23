@@ -8,7 +8,20 @@
               <strong>🐦 Pokemon</strong>
             </div>
           </div>
-          <div class="nav-right nav-menu"></div>
+          <div class="nav-right nav-menu">
+            <router-link
+              :to="{ name: 'Home' }"
+              class="nav-item"
+            >
+              Inicio
+            </router-link>
+            <router-link
+              :to="{ name: 'About' }"
+              class="nav-item"
+            >
+              Nosotros
+            </router-link>
+          </div>
         </div>
       </header>
     </div>
