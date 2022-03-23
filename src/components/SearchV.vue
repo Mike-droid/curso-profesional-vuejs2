@@ -1,18 +1,24 @@
 <template>
   <main>
-    <NotificationV
-      v-show="showNotification"
-    >
-      <p slot="body">No se encontraron resultados</p>
-    </NotificationV>
-    <LoaderV
-      v-show="isLoading"
-    />
+    <transition name="move">
+      <NotificationV
+        v-show="showNotification"
+      >
+        <p slot="body">No se encontraron resultados</p>
+      </NotificationV>
+    </transition>
+
+    <transition name="move">
+      <LoaderV
+        v-show="isLoading"
+      />
+    </transition>
     <input
       class="input is-primary"
       type="text"
       v-model="searchQuery"
       placeholder="Pokemon name or ID"
+      @keyup.enter="search"
     >
     <button
       @click="search"

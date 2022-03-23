@@ -24,10 +24,6 @@ export default {
   },
 
   methods: {
-    onClick() {
-      this.$emit('on-click', this.pokemon);
-    },
-
     goToPokemon(id) {
       this.$router.push(`/pokemon/${id}`);
     }

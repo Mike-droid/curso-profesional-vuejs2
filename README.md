@@ -549,3 +549,21 @@ Un plugin añade funcionalidades.
 ### Instalar vue-router y configurar router view
 
 ### Crear y navegar rutas con router-link
+
+## Extendiendo VueJS
+
+### Modifiers
+
+Ejemplo muy básico: `@keyup.enter="search"`
+
+### Filtros
+
+### Directivas personalizadas
+
+### Mixins
+
+Los mixins nos permiten reutilizar funcionalidad de los componentes.
+
+## Clases, animaciones y transiciones
+
+### Vue transitions y animaciones de css
