@@ -531,3 +531,19 @@ Cada componente tiene su ciclo de vida.
 Padre -> **propiedades** -> Hijo
 
 Hijo -> **eventos** -> Padre
+
+### Comunicación de hijos hacia padres
+
+### Utilización de slots
+
+Los slots nos permiten no sobrecargar componentes.
+
+### Comunicacion entre Componentes Genericos - Event Bus y Plugins
+
+Un plugin añade funcionalidades.
+
+## Vue Router
+
+### Introducción a Vue Router
+
+### Instalar vue-router y configurar router view

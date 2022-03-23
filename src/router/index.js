@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    component: () => import('@/components/SearchV.vue')
   },
 ]
 
