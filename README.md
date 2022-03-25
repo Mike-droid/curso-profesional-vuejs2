@@ -589,3 +589,54 @@ Las **acciones** hacen que la información viaje desde el **estado** hasta la **
 Las mutations son sincronas y las actions son asincronas.
 
 ### Integración a Platzi Music 2
+
+## Nuxt.js
+
+### Server Side Rendering
+
+Podemos mejorar el SEO con SSR.
+
+[Página oficial de Nuxt.js](https://nuxtjs.org/)
+
+### Nuxt.js 2.15.8
+
+[Instalación](https://nuxtjs.org/docs/get-started/installation)
+
+### Conceptos básicos de Nuxt
+
+## Deplot con Vercel
+
+### Vercel
+
+[Nuxt - Vercel](https://nuxtjs.org/deployments/vercel/)
+
+## Bonus
+
+### Internalización con vue-i18n
+
+[Sitio web oficial de vue-i18n](https://vue-i18n.intlify.dev/)
+
+Esto nos sirve para poder tener nuestra aplicación disponible en distintos idiomas.
+
+### Unit test
+
+[Documentación para unit test con vue](https://vuejs.org/guide/scaling-up/testing.html)
+
+## Examen
+
+- ¿Para qué sirve la API de fetch del navegador?: manejar peticiones HTTP
+- ¿Cuál es la función de los plugins de Vue?: extender el comportamiento de nuestros componentes
+- ¿Cuál es la directiva de vue.js que me permite enlazar un input de HTML con una propiedad del View Model?: v-bind
+- ¿Qué tipo de cosas puedo definir dentro del objeto methods del View Model?: funciones
+- ¿Para qué sirven las rules o reglas de Webpack?: correr procesos intermedios
+- ¿Cómo se llama el archivo de configuración de ESLint?: .eslintrc
+- ¿Qué debo agregar a la parte de template de nuestro componente para utilizar la sintaxis de PUG?: lang="pug"
+- ¿Cuál es la directiva de Vue.js que me permite manejar eventos?: v-on o @
+- ¿Qué es Sass?: precompilador de CSS
+- ¿Cuál es la función de ESLint?: informar sobre errores
+- ¿Para qué sirven los presets de Babel?: transforme el código
+- ¿Cuál es la función de Webpack?: generar un bundle
+- ¿Cuál es la función de Babel?: transformar código ES6 a ES5
+- ¿En qué se diferencian una propiedad computed y un watcher?: computed retorna y watcher mira el cambio
+- Dentro del View Model (VM) la sección que llamamos "data" debe ser: función que retorna objeto
+
