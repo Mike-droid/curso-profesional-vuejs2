@@ -567,3 +567,25 @@ Los mixins nos permiten reutilizar funcionalidad de los componentes.
 ## Clases, animaciones y transiciones
 
 ### Vue transitions y animaciones de css
+
+## Vuex
+
+### Estado Centralizado, Flux y Vuex
+
+Vuex es una librería para manejar el estado de una aplicación. Se recomienda usar en proyectos de mediana y alta complejidad/escala.
+
+Las **acciones** hacen que la información viaje desde el **estado** hasta la **vista**.
+
+[Documentación de Vuex](https://vuex.vuejs.org/)
+
+### State
+
+### Mutations
+
+### Getters
+
+### Actions
+
+Las mutations son sincronas y las actions son asincronas.
+
+### Integración a Platzi Music 2
